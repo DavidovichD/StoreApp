@@ -1,6 +1,6 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
 import React, { useState, useEffect } from "react";
-import { Colors, Items, Cars } from "../database/Database";
+import { Colors } from "../database/Database";
 import { StatusBar } from "expo-status-bar";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -69,7 +69,7 @@ const Home = () => {
                         marginLeft: 10,
                       }}
                     >
-                      {carCount} {/*how many cars exists in that brand*/}
+                      {carCount} {/*how many cars exist in that brand*/}
                     </Text>
                   </View>
                   <Text
@@ -221,70 +221,6 @@ const Home = () => {
             {"\n"}Offering luxurious automotives
           </Text>
         </View>
-
-        {/* Category */}
-        {/* <View
-          style={{
-            padding: 16,
-          }}
-        >
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
-              <Text
-                style={{
-                  fontSize: 18,
-                  color: Colors.black,
-                  fontWeight: "500",
-                  letterSpacing: 1,
-                }}
-              >
-                Ferrari
-              </Text>
-              <Text
-                style={{
-                  fontSize: 14,
-                  color: Colors.black,
-                  fontWeight: "400",
-                  opacity: 0.5,
-                  marginLeft: 10,
-                }}
-              >
-                {ferrariCounter()}
-              </Text>
-            </View>
-            <Text
-              style={{
-                fontSize: 14,
-                color: Colors.blue,
-                fontWeight: "400",
-              }}
-            >
-              See All
-            </Text>
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-around",
-            }}
-          >
-            {ferrariCars.map((data) => {
-              return <FerrariCard data={data} key={data.id} />;
-            })}
-          </View>
-        </View> */}
 
         {/*Render*/}
         {categoriesStr}

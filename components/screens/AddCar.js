@@ -4,13 +4,10 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
-  Image,
   ToastAndroid,
   StyleSheet,
-  Button,
 } from "react-native";
-import React, { useState, useEffect } from "react";
-import { useFocusEffect } from '@react-navigation/native';
+import React, { useState } from "react";
 import { Colors } from "../database/Database";
 import { useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -191,15 +188,43 @@ function AddCar() {
               placeholder="3rd Image URL"
               keyboardType="text"
             />
-            <View>
-              <Button 
-                title='Add'
-                onPress={btnAdd}
-              ></Button>
-            </View>
           </View>
         </View>
       </ScrollView>
+      <View
+        style={{
+          position: "absolute",
+          bottom: 10,
+          height: "8%",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <TouchableOpacity
+          onPress={btnAdd}
+          style={{
+            width: "86%",
+            height: "90%",
+            backgroundColor: Colors.blue,
+            borderRadius: 20,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: "500",
+              letterSpacing: 1,
+              color: Colors.white,
+              textTransform: "uppercase",
+            }}
+          >
+            Add
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
