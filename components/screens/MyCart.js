@@ -6,7 +6,7 @@ import {
   Image,
   ToastAndroid,
 } from "react-native";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useFocusEffect } from '@react-navigation/native';
 import { Colors } from "../database/Database";
 import { useNavigation } from "@react-navigation/native";
@@ -299,7 +299,6 @@ const MyCart = () => {
           My Cart
         </Text>
         <View style={{ paddingHorizontal: 16 }}>
-          {/* {car ? car.map(renderProducts) : null} */}
           {savedCarsStr}
         </View>
 
